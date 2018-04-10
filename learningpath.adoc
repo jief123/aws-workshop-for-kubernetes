@@ -8,6 +8,22 @@ image:kubernetes-aws-smile.png[alt="kubernetes and aws logos", align="left",widt
 
 [cols="1*^",grid="cols",options="header"]
 |=====
+|anchor:select[select Path]select Path
+|link:01-path-basics/101-start-here[101: Start Here]
+|link:01-path-basics/102-your-first-cluster[102: Create a Kubernetes cluster using kops]
+|link:01-path-basics/103-kubernetes-concepts[103: Introduction to the Kubernetes CLI]
+|link:02-path-working-with-clusters/203-cluster-upgrades[203: Upgrading a Kubernetes Cluster]
+|link:02-path-working-with-clusters/205-cluster-autoscaling[205: Autoscaling a Kubernetes Cluster]
+|link:02-path-working-with-clusters/206-cloudformation-and-terraform[206: Deploy Kubernetes with Terraform and CloudFormation]
+|link:04-path-security-and-networking/402-authentication-and-authorization[402: Authentication, Authorization, and Access]
+|link:04-path-security-and-networking/404-network-policies[404: Network Policies]
+|link:04-path-security-and-networking/405-ingress-controllers[405: Ingress Controllers]
+|link:05-path-next-steps/501-k8s-best-practices[501: Best Practices]
+|=====
+
+
+[cols="1*^",grid="cols",options="header"]
+|=====
 |anchor:Full[Full Path]Full Path
 |link:01-path-basics/101-start-here[101: Start Here]
 |link:01-path-basics/102-your-first-cluster[102: Create a Kubernetes cluster using kops]
