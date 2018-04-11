@@ -3,7 +3,7 @@
 :linkattrs:
 :imagesdir: resources/images
 
-image:kubernetes-aws-smile.png[alt="kubernetes and aws logos", align="left",width=420]
+image:kubernetes-aws-smile.png[alt="kubernetes and aws logos", align="center",width=420]
 
 这个项目是一个持续改进的关于如何在AWS上部署Kubernetes的实验。通过这个实验可以对在AWS平台上部署Kubernetes的各种模式有所了解，同时也可以加强对AWS平台的理解与认识，最终帮助大家全面了解在AWS平台上部署的最佳实践。
 
