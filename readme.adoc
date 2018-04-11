@@ -1,4 +1,5 @@
-=                                       Kubernetes the AWSome Way!
+= Kubernetes the AWSome Way!
+
 :icons:
 :linkattrs:
 :imagesdir: resources/images
