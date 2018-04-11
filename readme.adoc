@@ -8,7 +8,7 @@ image:kubernetes-aws-smile.png[alt="kubernetes and aws logos", align="left",widt
 这个项目是一个持续改进的关于如何在AWS上部署Kubernetes的实验。通过这个实验最终可以对在AWS平台上部署Kubernetes的各种模式有所了解，同时也可以加强对AWS平台的理解与认识。
 实验主要分为5节，第一节主要是环境准备，第二节是Kubernetes基础部署，第三节是开发相关内容，第四节是运维深度集成，第五节是最佳实践。
 
-实验的内容会根据在K8S在AWS实践的情况进行定期更新。这个实验需要用到海外的AWS账号，以及一台笔记本。进行如下实验会产生对应的使用费用，如果使用免费级别，预计为每天20$左右，具体价格可以参考如下链接：https://calculator.s3.amazonaws.com/index.html#r=FRA&s=EC2&key=calc-E6DBD6F1-C45D-4827-93F8-D9B18C5994B0[K8S预估价格]
+实验的内容会根据在K8S在AWS实践的情况进行定期更新。这个实验需要用到海外的AWS账号，以及一台笔记本。进行如下实验会产生对应的使用费用，如果使用免费级别，预计为每天20$左右，具体价格可以参考如下链接：link:https://calculator.s3.amazonaws.com/index.html#r=FRA&s=EC2&key=calc-E6DBD6F1-C45D-4827-93F8-D9B18C5994B0[K8S预估价格]
 
 实验会包括：创建，管理，扩展K8S集群，部署应用程序，对应用程序的扩展，无状态／有状态的容器管理，服务发现，同时还包括了一些最新的扩展概念的实验。
 
