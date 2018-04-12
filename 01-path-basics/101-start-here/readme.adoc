@@ -13,21 +13,19 @@
 We can create the EC2 development environment via CloudFormation.
 This CloudFormation template will spin up the EC2 Instance, as well as configure the environment for the rest of the workshop.
 
-The CloudFormation template can create a new VPC. VPC & EC2 Name all equal to Stack Name you input when create Template.
 
-Please Use K8SWorkshop.pem as a Key file to access ec2-user@ for your enviroment.
 
 Click on the "Deploy to AWS" button and follow the CloudFormation prompts to begin.
 
 [NOTE]
-AWS Cloud9 is currently available in 5 regions.
-Please choose the region closest to you.
+The CloudFormation template can create a new VPC. VPC & EC2 Name all equal to Stack Name you input when create Template.
+Please Use K8SWorkshop.pem as a Key file to access ec2-user@ for your enviroment.
 
 |===
 
-|Region | Launch template with a new VPC | Launch template with an existing VPC
+|Region | Launch template with a new VPC
 | *Tokyo* (ap-northeast-1)
-a| image::./deploy-to-aws.png[link=https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=k8s-workshop&templateURL=https://s3-ap-northeast-1.amazonaws.com/cf-templates-ekccenh0a2a7-ap-northeast-1/2018102TRy-YonYouWorkshopdnyddidm4qe]
+| image::./deploy-to-aws.png[link=https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=k8s-workshop&templateURL=https://s3-ap-northeast-1.amazonaws.com/cf-templates-ekccenh0a2a7-ap-northeast-1/2018102TRy-YonYouWorkshopdnyddidm4qe]
 |===
 
 To open the Cloud9 IDE environment, click on the "Outputs" tab in CloudFormation Console and click on the "Cloud9IDE" URL.
