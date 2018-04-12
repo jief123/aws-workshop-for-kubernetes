@@ -5,16 +5,17 @@
 :imagesdir: ../../resources/images
 
 
-This section walks you through the creating a Kubernetes development environment using https://aws.amazon.com/cloud9/[AWS Cloud9].  This will provide you with a cloud-based integrated development environment (IDE) that will let you write, run, and debug containerized workloads using just a web browser.
+这部分根据客户情况进行了大幅修订，目前采用EC2 Amazon-Linux作为实验用登陆环境，下面会引导大家创建EC2的登陆环境.
 
-== Create AWS Cloud9 Environment
-=== AWS Cloud9 Console
+== 创建EC2登陆环境
+=== Amazon Linux
 
-We can create the Cloud9 development environment via CloudFormation.
-This CloudFormation template will spin up the Cloud9 IDE, as well as configure the IDE environment for the rest of the workshop.
+We can create the EC2 development environment via CloudFormation.
+This CloudFormation template will spin up the EC2 Instance, as well as configure the environment for the rest of the workshop.
 
-The CloudFormation template can create a new VPC, or you can choose an existing VPC if needed.
-If you are unsure, we recommend the "Launch template with an existing VPC" option.
+The CloudFormation template can create a new VPC. VPC & EC2 Name all equal to Stack Name you input when create Template.
+
+Please Use K8SWorkshop.pem as a Key file to access ec2-user@ for your enviroment.
 
 Click on the "Deploy to AWS" button and follow the CloudFormation prompts to begin.
 
@@ -23,11 +24,10 @@ AWS Cloud9 is currently available in 5 regions.
 Please choose the region closest to you.
 
 |===
-https://s3-ap-northeast-1.amazonaws.com/cf-templates-ekccenh0a2a7-ap-northeast-1/2018102TRy-YonYouWorkshopdnyddidm4qe
 
 |Region | Launch template with a new VPC | Launch template with an existing VPC
-| *Tokyo* (ap-north-1)
-a| image::./deploy-to-aws.png[link=https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=k8s-workshop&templateURL=https://s3-ap-northeast-1.amazonaws.com/cf-templates-ekccenh0a2a7-ap-northeast-1/2018102TRy-YonYouWorkshopdnyddidm4qe]
+| *Tokyo* (ap-northeast-1)
+a| image::./deploy-to-aws.png[link=https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=k8s-workshop&templateURL=https://s3-ap-northeast-1.amazonaws.com/cf-templates-ekccenh0a2a7-ap-northeast-1/2018102TRy-YonYouWorkshopdnyddidm4qe]
 |===
 
 To open the Cloud9 IDE environment, click on the "Outputs" tab in CloudFormation Console and click on the "Cloud9IDE" URL.
