@@ -25,7 +25,7 @@ Please Use K8SWorkshop.pem as a Key file to access ec2-user@ for your enviroment
 
 |Region | Launch template with a new VPC
 | *Tokyo* (ap-northeast-1)
-| image:./deploy-to-aws.png[link=https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=k8s-workshop&templateURL=https://s3-ap-northeast-1.amazonaws.com/cf-templates-ekccenh0a2a7-ap-northeast-1/2018102TRy-YonYouWorkshopdnyddidm4qe]
+| image:./deploy-to-aws.png[link=https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=k8s-workshop&templateURL=https://s3-ap-northeast-1.amazonaws.com/yonyousharing/YonYouWorkshop.template]
 |===
 
 To Access EC2 Public IP address, which is dynamic changed, click on the "Outputs" tab in CloudFormation Console and Check the Output.
