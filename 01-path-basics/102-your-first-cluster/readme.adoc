@@ -23,7 +23,7 @@ We show two examples of creating gossip-based clusters below. You can choose whe
 
 By default, the `kops create cluster` command creates a single master node and two worker nodes in the specified zones.
 
-Create a Kubernetes cluster using the following command. Run it in the "bash" terminal tab at the bottom of the Cloud9 IDE. This will create a cluster with a single master, multi-node and multi-az configuration:
+Create a Kubernetes cluster using the following command. Run it in the "bash" terminal tab at the bottom of the Cloud9 IDE. This will create a cluster with a single master, multi-node and multi-az configuration, try you your name replace "example":
 
     $ kops create cluster \
       --name example.cluster.k8s.local \
