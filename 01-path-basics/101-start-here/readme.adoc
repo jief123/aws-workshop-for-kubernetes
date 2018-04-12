@@ -18,7 +18,7 @@ This CloudFormation template will spin up the EC2 Instance, as well as configure
 Click on the "Deploy to AWS" button and follow the CloudFormation prompts to begin.
 
 [NOTE]
-The CloudFormation template can create a new VPC. VPC & EC2 Name all equal to Stack Name you input when create Template.
+The CloudFormation template create a new VPC. VPC & EC2 Name all equal to Stack Name you input when create a Cloudformation Stack.
 Please Use K8SWorkshop.pem as a Key file to access ec2-user@ for your enviroment.
 
 |===
