@@ -1,0 +1,20 @@
+= Kubernetes Invitation Letter!
+
+:icons:
+:linkattrs:
+:imagesdir: resources/images
+
+image:kubernetes-aws-smile.png[alt="kubernetes and aws logos", align="center",width=420]
+
+请您参加AWS平台K8S容器云训练营。
+时间：  xxx
+地点：用友xxx
+
+
+AWS平台K8S容器云训练营是为用友集团量身定制的关于如何在AWS上部署Kubernetes的实验。这个实验包括了，对在AWS平台上Kubernetes的各种模式的介绍，同时继承了全球最先进的K8S部署实践。通过讲师讲解、学员动手实验、总结与答疑等环节让参与者最终与全球知识库接轨。
+
+训练营会分两到三期举行，第一期着重于部署及运维过程，时间为两个小时。视情况后面还会有开发集成、以及全球容器发展的最新理念等章节。
+
+实验的内容也会根据在K8S在AWS实践的情况进行定期更新。这个实验需要一台笔记本，最好有海外VPN连接，欢迎大家踊跃参加。
+
+
