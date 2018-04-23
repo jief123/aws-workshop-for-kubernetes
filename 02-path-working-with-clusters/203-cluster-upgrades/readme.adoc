@@ -301,3 +301,10 @@ You are now ready to continue on with the workshop!
 |link:../../standard-path.adoc[Go to Standard Index]
 |link:../../operations-path.adoc[Go to Operations Index]
 |=====
+
+
+== 问题
+
+1. Update过程中采用什么策略保证生产系统运行
+
+2. 同样的方法是否可以修改集群尺寸
