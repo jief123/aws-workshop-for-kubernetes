@@ -14,7 +14,7 @@ A CloudFormation template is available in the link:cloudformation[] directory.
 
 In the example below, create a Kubernetes cluster with cloudformation using the aws cli. Note that a valid EC2 KeyName registered to your account must be supplied to execute successfully.
 
-	cd quickdeploy
+
 	aws cloudformation create-stack \
 		--stack-name k8s \
 		--template-body file://cloudformation/k8s-create-no-alb.yaml \
@@ -52,3 +52,10 @@ You are now ready to continue on with the workshop!
 |image:button-continue-operations.png[link=../../04-path-security-and-networking/401-configmaps-and-secrets]
 |link:../../operations-path.adoc[Go to Operations Index]
 |=====
+
+
+== 问答
+
+1. 在进行创建集群之前需要给自己的EC2环境分配新的角色，请问需要分配那些角色？
+
+2. 还需要Keyname应该修改成什么？
