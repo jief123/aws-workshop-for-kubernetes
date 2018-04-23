@@ -7,7 +7,7 @@ This tutorial will walk you through how to setup cluster scaling using `cluster-
 
 == Prerequisites
 
-This chapter uses a cluster with 3 master nodes and 5 worker nodes as described here: link:../cluster-install#multi-master-multi-node-multi-az-gossip-based-cluster[multi-master, multi-node gossip based cluster].
+This chapter uses a cluster with 3 master nodes and 3 worker nodes as described here: link:https://github.com/jief123/aws-workshop-for-kubernetes/tree/master/01-path-basics/102-your-first-cluster[multi-master, multi-node gossip based cluster].
 
 All configuration files for this chapter are in the `cluster-scaling` directory. Make sure you change to that directory before giving any commands in this chapter.
 
@@ -26,7 +26,7 @@ $ aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names nodes.
             "AutoScalingGroupARN": "arn:aws:autoscaling:us-east-1:<account-id>:autoScalingGroup:xxx:autoScalingGroupName/nodes.cluster.k8s.local",
             .
             .
-            "MaxSize": 10,
+            "MaxSize": 3,
 }
 ```
 
@@ -34,7 +34,7 @@ The exact value can be identified using the command:
 
   aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names nodes.cluster.k8s.local | jq .AutoScalingGroups[0].MaxSize
 
-If the value of `MaxSize` is 2 (which means you can't scale beyond 2 worker nodes) then update it using kops using the following command:
+If the value of `MaxSize` is 3 (which means you can't scale beyond 3 worker nodes) then update it using kops using the following command:
 
     kops edit ig nodes
 
@@ -52,15 +52,15 @@ Using cluster from kubectl context: example.cluster.k8s.local
   spec:
     image: kope.io/k8s-1.6-debian-jessie-amd64-hvm-ebs-2017-07-28
     machineType: t2.medium
-    maxSize: 5
-    minSize: 5
+    maxSize: 3
+    minSize: 3
     role: Node
     subnets:
     - eu-central-1a
     - eu-central-1b
     - eu-central-1c
 
-Change the value of `maxSize` to `10`. Save the configuration file and exit out of the editor.
+Change the value of `maxSize` to `4`. Save the configuration file and exit out of the editor.
 
 Update cluster configuration:
 
@@ -229,6 +229,9 @@ You can find the name of nodes ASG using this command
   ]
 
 The last value in this output is the name of the nodes ASG. If the default cluster name of `example.cluster.k8s.local` was used to create the cluster, then there is no need to make any changes to the configuration file.
+Before you Create deployment, you need to add a cluster roles to default user.
+
+  $ kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin   --serviceaccount=kube-system:default
 
 Now, install the `cluster-autoscaler` with a configuration of `min: 2, max: 10, name: cluster-autoscaler`
 
@@ -263,14 +266,14 @@ To validate that the `cluster-autoscaler` is properly working you can use the `a
   export ASG_NAME=nodes.example.cluster.k8s.local
   aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names=$ASG_NAME --query 'AutoScalingGroups[0].DesiredCapacity'
 
-You should see a result of 5, or whatever was the initial size of your cluster.
+You should see a result of 3, or whatever was the initial size of your cluster.
 
 Check the max size of your cluster:
 
   $ aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names=$ASG_NAME --query 'AutoScalingGroups[0].MaxSize'
-  10
+  4
 
-This correctly shows 10, as was set earlier in this chapter.
+This correctly shows 4, as was set earlier in this chapter.
 
 Then you can deploy an application which requests more resources than your cluster has available see `templates/dummy-resource-offers.yaml` for reference.
 
@@ -346,3 +349,12 @@ You are now ready to continue on with the workshop!
 |image:button-continue-operations.png[link=../../02-path-working-with-clusters/205-cluster-autoscaling]
 |link:../../operations-path.adoc[Go to Operations Index]
 |=====
+
+
+== 问答
+
+1. KOPS将状态信息存储在什么地方？
+
+2. 更改集群IAM配置之后node role策略增加了哪些内容？
+
+3. More please check https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws.
