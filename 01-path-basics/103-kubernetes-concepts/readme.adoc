@@ -215,9 +215,9 @@ Verify that the pod came up fine (ensure nothing else is running on port 8080):
 
 	$ kubectl -n default port-forward $(kubectl -n default get pod -l name=nginx-pod -o jsonpath='{.items[0].metadata.name}') 8080:80
 
-In your Cloud9 IDE, click **Preview** and **Preview Running Application**. This opens up a preview tab and shows the NGINX main page:
+In your EC2 , you can curl the website proxy at localhost:8080 to verified.
 
-image::nginx-pod-default-page.png[]
+
 
 If the containers in the pod generate logs, then they can be seen using the command shown:
 
