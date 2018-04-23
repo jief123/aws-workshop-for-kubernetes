@@ -190,3 +190,11 @@ The workshop repository has configuration files that are used to create Kubernet
 At this point, you should have everything you need to complete any of the sections of the this workshop using your Cloud9 Environment.
 
 ====
+
+完成练习后请回答如下问题：
+1. 创建的实例ID为：
+2. VPC的名字为：
+3. 对应的安全组ID为：
+4. 实例有哪些IAM权限：
+
+
