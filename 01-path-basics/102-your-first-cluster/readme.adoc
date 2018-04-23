@@ -459,4 +459,4 @@ Your output may differ from the one shown here based up on the type of cluster y
 
 4. 请列出API服务的对应负载均衡名称与资产标签
 
-5. 负载均衡服务对应的安全组入站规则有哪些
+5. 负载均衡服务对应的那些实例和那些可用区
