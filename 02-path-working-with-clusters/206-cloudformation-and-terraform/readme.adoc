@@ -59,3 +59,5 @@ You are now ready to continue on with the workshop!
 1. 在进行创建集群之前需要给自己的EC2环境分配新的角色，请问需要分配那些角色？
 
 2. 还需要Keyname应该修改成什么？
+
+3. Cloudformation 是如何创建的K8S集群？
