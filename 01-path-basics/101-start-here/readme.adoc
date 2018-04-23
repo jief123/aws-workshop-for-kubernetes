@@ -201,3 +201,5 @@ At this point, you should have everything you need to complete any of the sectio
 
 4. 实例有哪些IAM权限：
 
+5. EC2中配置了哪些环境变量：
+
