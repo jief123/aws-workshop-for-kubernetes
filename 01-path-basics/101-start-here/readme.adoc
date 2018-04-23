@@ -65,7 +65,7 @@ Once you have finished with the workshop, please don't forget to spin down your 
 
 ==== Delete Kubernetes cluster resources
 
-In your Cloud9 IDE, check if there are any running kubernetes cluster
+In your EC2 IDE, check if there are any running kubernetes cluster
 
    $ kops get cluster
 
@@ -75,7 +75,7 @@ Delete kubernetes cluster
 
 Wait until all resources are deleted by kops
 
-==== Delete Cloud9 Envionment
+==== Delete EC2 Envionment
 
 Go to CloudFormation console, right click template with You Stack name like 'k8s-workshop' and select 'Delete Stack'
 
@@ -185,7 +185,7 @@ The bucket name must be unique otherwise you will encounter an error on deployme
 
 The workshop repository has configuration files that are used to create Kubernetes resources.  You need to clone the repo to have access to those files:
 
-    $ git clone https://github.com/aws-samples/aws-workshop-for-kubernetes
+    $ git clone https://github.com/jief123/aws-workshop-for-kubernetes
 
 At this point, you should have everything you need to complete any of the sections of the this workshop using your Cloud9 Environment.
 
