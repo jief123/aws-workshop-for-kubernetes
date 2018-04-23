@@ -17,7 +17,7 @@ image:kubernetes-aws-smile.png[alt="kubernetes and aws logos", align="center",wi
 
 这个实验是forked from aws-samples/aws-workshop-for-kubernetes。
 
-下面为初次在AWS上创建K8S集群的客户定制的选单，预期完成时间2-3小时。
+下面为初次在AWS上创建K8S集群的客户定制的选单，后续内容以英文为主，预期完成时间2-3小时。
 
 [cols="1*^",grid="cols",options="header"]
 |=====
