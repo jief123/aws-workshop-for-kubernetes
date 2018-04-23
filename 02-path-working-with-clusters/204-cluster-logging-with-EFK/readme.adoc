@@ -251,3 +251,12 @@ You are now ready to continue on with the workshop!
 |image:button-continue-operations.png[link=../../02-path-working-with-clusters/204-cluster-logging-with-EFK]
 |link:../../operations-path.adoc[Go to Operations Index]
 |=====
+
+
+== 问答
+
+1. 为了能完成实验自己的用户都添加了哪些权限？
+
+2. 除了在配置文件中写明用户的密钥，还有何种方法可以鉴权？
+
+3. 为何需要通过Cloudwatch Logs进行日志的统一管理？
