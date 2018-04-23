@@ -74,7 +74,7 @@ Your cluster example.cluster.k8s.local is ready
 anchor:multi-master[]
 
 === Multi-Master Cluster
-
+注意Node-size与Master-size请按照对应的签到表分配的实例类型.
 The command below creates a cluster in a multi-master, multi-node, and multi-az configuration.
 Run it in the "bash" terminal tab at the bottom of the Cloud9 IDE.
 We can create and build the cluster in one step by passing the `--yes` flag.
@@ -82,7 +82,9 @@ We can create and build the cluster in one step by passing the `--yes` flag.
     $ kops create cluster \
       --name example.cluster.k8s.local \
       --master-count 3 \
-      --node-count 5 \
+      --node-count 3 \
+      --node-size=t2.micro \
+      --master-size=t2.small \
       --zones $AWS_AVAILABILITY_ZONES \
       --yes
 
@@ -408,7 +410,7 @@ one step by passing the `--yes` flag.
     $ kops create cluster \
       --name example.cluster.com \
       --master-count 3 \
-      --node-count 5 \
+      --node-count 3 \
       --zones $AWS_AVAILABILITY_ZONES \
       --yes
 
@@ -446,3 +448,12 @@ Your cluster example.cluster.com is ready
 Note that all masters are spread across different AZs.
 
 Your output may differ from the one shown here based up on the type of cluster you created.
+
+== 请回答如下问题
+
+1. 请记录从开始部署到集群工作的耗时：
+
+2. 列出运行节点ID与可用区之间的对应关系：
+
+3. 列出管理节点ID与可用区之间的对应关系：
+
