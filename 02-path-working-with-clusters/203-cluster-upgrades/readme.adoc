@@ -22,7 +22,7 @@ In this chapter, we'll create a Kubernetes 1.6.10 version cluster as shown:
     --name example.cluster.k8s.local \
     --master-count 3 \
     --master-zones ${AWS_AVAILABILITY_ZONES} \
-    --node-count 5 \
+    --node-count 3 \
     --zones ${AWS_AVAILABILITY_ZONES} \
     --kubernetes-version=1.6.10 \
     --yes
